@@ -22,7 +22,7 @@ public class DefaultAddConditionConverter extends AbstractConverter<List<Conditi
     public Map<String, ConditionControl> resolveControlAndTables(List<Table> tables, List<ConditionControl> controls) {
         return resolve(tables, controls);
     }
-
+    /** 根据表信息和条件控制得到字段名或别名与条件控制的映射 */
     public Map<String, ConditionControl> resolve(List<Table> tables, List<ConditionControl> conditionControls) {
         Map<String, ConditionControl> map = new HashMap<>(conditionControls.size() * 2 + 1, 1);
         for (ConditionControl conditionControl : conditionControls) {
